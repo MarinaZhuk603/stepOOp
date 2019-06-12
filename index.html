@@ -9,44 +9,50 @@
 </head>
 <body>
 <header class="header">
-    <a href="#"><i class="fas fa-heartbeat"></i></a><button id="myBtn" class="knopka01">Создать</button>
+    <a href="#"><i class="fas fa-heartbeat"></i></a><button id="myBtn" class="knopka01">CREATE</button>
 </header>
-<div class="form-modal" >
-    <span class="close">&times;</span>
-    <div class="modal">
-        <select id="mySelect" onchange="doctorFunction()">
-            <option value="cardiologist">Кардиолог</option>
-            <option value="dentist">Стоматолог</option>
-            <option value="therapist">Терапевт</option>
-        </select>
-    <form action="" method="post" name="test" id="form">
-        <div class="cardio">
-            <input  type="text" name="name" placeholder="ФИО">
-            <input type="text" name="age" placeholder="Возраст">
-            <input type="text" name="target" placeholder="Цель Визита">
-            <input type="text" name="pressure" placeholder="Обычное давление">
-            <input type="text" name="mass" placeholder="Индекс массы тела">
-            <input type="text" name="diseases" placeholder="Перенесенные заболевания сердечно-сосудистой системы">
-            <textarea name="comment">Добавьте сюда свой комментарий</textarea>
+<div id="desk">
+    <h3 class="info">No items have been added</h3>
+    <div class="form-modal modal-hidden">
+        <span class="close">&times;</span>
+        <div class="modal">
+            <select id="mySelect" onchange="doctorFunction()">
+                <option value="cardiologist">Кардиолог</option>
+                <option value="dentist">Стоматолог</option>
+                <option value="therapist">Терапевт</option>
+            </select>
+            <div class="cardio">
+                <form action="" method="post" name="test" id="form">
+                    <input type="text" name="name" required placeholder="ФИО">
+                    <input type="text" name="age" placeholder="Возраст">
+                    <input type="text" name="target" placeholder="Цель Визита">
+                    <input type="text" name="pressure" placeholder="Обычное давление">
+                    <input type="text" name="mass" placeholder="Индекс массы тела">
+                    <input type="text" name="diseases" placeholder="Перенесенные заболевания сердечно-сосудистой системы">
+                    <textarea name="comment">Добавьте сюда свой комментарий</textarea>
+                </form>
+            </div>
+            <div class="dent">
+                <form action="" id='dentistForm' method="post" name="test">
+                    <input type="text" name="name" required placeholder="ФИО">
+                    <input type="text" name="target" placeholder="Цель Визита">
+                    <input type="text" name="lastVisit" placeholder="Последняя дата визита">
+                    <textarea name="comment">Добавьте сюда свой комментарий</textarea>
+                </form>
+            </div>
+            <div class="therap">
+                <form action="" method="post" name="test" id="therapistForm">
+                    <input type="text" name="name" placeholder="ФИО">
+                    <input type="text" name="age" placeholder="Возраст">
+                    <input type="text" name="target" placeholder="Цель Визита">
+                    <textarea name="comment">Добавьте сюда свой комментарий</textarea>
+                </form>
+            </div>
         </div>
-        <div class="dent">
-            <input id="foo" type="text" name="name" placeholder="ФИО">
-            <input type="text" name="target" placeholder="Цель Визита">
-            <input type="text" name="target" placeholder="Последняя дата визита">
-            <textarea name="comment">Добавьте сюда свой комментарий</textarea>
-        </div>
-        <div class="therap">
-            <input type="text" name="name" placeholder="ФИО">
-            <input type="text" name="age" placeholder="Возраст">
-            <input type="text" name="target" placeholder="Цель Визита">
-            <textarea name="comment">Добавьте сюда свой комментарий</textarea>
-        </div>
-    </form>
-        <input type="button" class="modalBtn" id="myCard" value="Create a Card" onClick="createCard(document.getElementById('form'))"> 
+        <input type="button" class="modalBtn" id="myCard" value="Create a Card" onClick="createCard(document.getElementById('form'))">
     </div>
-   
-</div>    
-    
+</div>
+
      
 <script src="../step-oop/main.js">
 </script>   
